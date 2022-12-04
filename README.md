@@ -47,7 +47,13 @@ $ git clone https://github.com/narcisista3g/dotfiles ~/.dotfiles
 # Go into the repository
 $ cd ~/.dotfiles/
 
-# Install dependencies
+# Backup Files
+$ make backup
+
+# Remove Files
+$ make remove
+
+# Install Files
 $ make install
 ```
 
