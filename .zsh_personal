@@ -1,0 +1,5 @@
+#
+# ~/.zsh_personal
+#
+
+[[ -f ~/.zshrc ]] && . ~/.zshrc
