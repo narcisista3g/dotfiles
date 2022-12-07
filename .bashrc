@@ -22,6 +22,6 @@ bind "set completion-ignore-case on"
 [[ -f ~/.bashrc-personal ]] && . ~/.bashrc-personal
 
 # Load Configs Shell
-if [ -f $HOME/.shell ]; then
-  source $HOME/.shell
+if [ -f $HOME/.shellrc ]; then
+  source $HOME/.shellrc
 fi
