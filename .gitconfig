@@ -1,78 +1,82 @@
 [user]
-  name = Alan Silva
-  email = 105025356+narcisista3g@users.noreply.github.com
-  username = narcisista3g
-
-[core]
-  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-  pager = delta
-  autocrlf = input
-  trustctime = false
-  excludesfile = ~/.gitignore
-  attributesfile = ~/.gitattributes
-
-[apply]
-  whitespace = fix
+	email = 105025356+narcisista3g@users.noreply.github.com
+	name = Alan Silva
+	username = narcisista3g
+	signingKey = 1EB7B24FCDF1026CDC5623C603BB2166777B6D44
 
 [init]
-  defaultBranch = main
+	defaultBranch = main
+
+[core]
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	pager = delta
+	autocrlf = input
+	trustctime = false
+	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
+
+[apply]
+ 	whitespace = fix
 
 [pull]
-  rebase = false
+	rebase = false
 
 [commit]
-	gpgsign = true
+	gpgSign = true
+
+[tag]
+	forceSignAnnotated = true
 
 [help]
-  autocorrect = 1
+	autocorrect = 1
 
 [color]
-  branch = auto
-  diff = auto
-  status = auto
-  ui = auto
+	branch = auto
+	diff = auto
+	status = auto
+	ui = auto
 
 [color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+	current = yellow reverse
+	local = yellow
+	remote = green
 
 [color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red
-  new = green
+	meta = yellow bold
+	frag = magenta bold
+	old = red
+	new = green
 
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+	added = yellow
+	changed = green
+	untracked = cyan
 
 [filter "lfs"]
-  clean = git-lfs clean -- %f
+	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
 
 [merge]
-  ff = only
-  log = true
+	ff = only
+	log = true
 
 [fetch]
-  prune = true
+	prune = true
 
 [diff]
-  colorMoved = zebra
-  renames = copies
+	colorMoved = zebra
+	renames = copies
 
 [push]
-  default = simple
+ 	default = simple
 
 [url "git@github.com:github"]
 	insteadOf = "https://github.com/narcisista3g"
 	insteadOf = "github:github"
 	insteadOf = "git://github.com/narcisista3g"
-
+	
 [url "git@github.com:"]
 	pushInsteadOf = "https://github.com/"
 	pushInsteadOf = "github:"
@@ -90,20 +94,20 @@
 	insteadOf = "gist:"
 
 [alias]
-  a = add --all
-  br = branch
-  psh = push -u
-  sf = show --name-only
-  ci = commit --no-edit
-  cm = commit -m
-  co = checkout
-  cm = checkout main
-  cb = checkout -b
-  st = status -sb
-  sf = show --name-only
-  lg = log --pretty=format:'%Cred%h%Creset %C(bold)%cr%Creset %Cgreen<%an>%Creset %s' --max-count=30
-  incoming = !(git fetch --quiet && git log --pretty=format:'%C(yellow)%h %C(white)- %C(red)%an %C(white)- %C(cyan)%d%Creset %s %C(white)- %ar%Creset' ..@{u})
-  outgoing = !(git fetch --quiet && git log --pretty=format:'%C(yellow)%h %C(white)- %C(red)%an %C(white)- %C(cyan)%d%Creset %s %C(white)- %ar%Creset' @{u}..)
-  unstage = reset HEAD --
-  undo = checkout --
-  rollback = reset --soft HEAD~1
+	a = add --all
+	br = branch
+	psh = push -u
+	sf = show --name-only
+	ci = commit --no-edit
+	cm = commit -m
+	co = checkout
+	cm = checkout main
+	cb = checkout -b
+	st = status -sb
+	sf = show --name-only
+	lg = log --pretty=format:'%Cred%h%Creset %C(bold)%cr%Creset %Cgreen<%an>%Creset %s' --max-count=30
+	incoming = !(git fetch --quiet && git log --pretty=format:'%C(yellow)%h %C(white)- %C(red)%an %C(white)- %C(cyan)%d%Creset %s %C(white)- %ar%Creset' ..@{u})
+	outgoing = !(git fetch --quiet && git log --pretty=format:'%C(yellow)%h %C(white)- %C(red)%an %C(white)- %C(cyan)%d%Creset %s %C(white)- %ar%Creset' @{u}..)
+	unstage = reset HEAD --
+	undo = checkout --
+	rollback = reset --soft HEAD~1
