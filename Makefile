@@ -9,7 +9,7 @@ remove:
 	@rm ~/.zsh_personal
 	@rm ~/.{Xresources,zsh_personal,yarnrc,vimrc,screenrc,face,dmrc,conkyrc}
 	@rm ~/.config/alacritty/alacritty.yml
-	@rm ~/.config/fontconfig/font.conf
+	@rm ~/.config/fontconfig/fonts.conf
 
 install:
 	@ln -s ~/.dotfiles/.bashrc ~/.bashrc
@@ -26,5 +26,4 @@ install:
 	@ln -s ~/.dotfiles/.dmrc ~/.dmrc
 	@ln -s ~/.dotfiles/.face ~/.face
 	@ln -s ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
-	@ln -s ~/.dotfiles/fonts/font.conf ~/.config/fontconfig/font.conf
-	
+	@ln -s ~/.dotfiles/fonts/fonts.conf ~/.config/fontconfig/fonts.conf
