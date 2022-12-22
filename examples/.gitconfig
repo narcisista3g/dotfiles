@@ -1,0 +1,113 @@
+[user]
+	email =
+	name = 
+	username = narcisista3g
+	signingKey =
+
+[init]
+	defaultBranch = main
+
+[core]
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	pager = delta
+	autocrlf = input
+	trustctime = false
+	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
+
+[apply]
+ 	whitespace = fix
+
+[pull]
+	rebase = false
+
+[commit]
+	gpgSign = true
+
+[tag]
+	forceSignAnnotated = true
+
+[help]
+  autocorrect = 1
+
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	ui = auto
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red
+	new = green
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[merge]
+	ff = only
+	log = true
+
+[fetch]
+	prune = true
+
+[diff]
+	colorMoved = zebra
+	renames = copies
+
+[push]
+ 	default = simple
+
+[url "git@github.com:github"]
+	insteadOf = "https://github.com/narcisista3g"
+	insteadOf = "github:github"
+	insteadOf = "git://github.com/narcisista3g"
+
+[url "git@github.com:"]
+	pushInsteadOf = "https://github.com/"
+	pushInsteadOf = "github:"
+	pushInsteadOf = "git://github.com/"
+
+[url "git://github.com/"]
+	insteadOf = "github:"
+
+[url "git@gist.github.com:"]
+	insteadOf = "gst:"
+	pushInsteadOf = "gist:"
+	pushInsteadOf = "git://gist.github.com/"
+
+[url "git://gist.github.com/"]
+	insteadOf = "gist:"
+
+[alias]
+	a = add --all
+	br = branch
+	psh = push -u
+	sf = show --name-only
+	ci = commit --no-edit
+	cm = commit -m
+	co = checkout
+	cm = checkout main
+	cb = checkout -b
+	st = status -sb
+	sf = show --name-only
+	lg = log --pretty=format:'%Cred%h%Creset %C(bold)%cr%Creset %Cgreen<%an>%Creset %s' --max-count=30
+	incoming = !(git fetch --quiet && git log --pretty=format:'%C(yellow)%h %C(white)- %C(red)%an %C(white)- %C(cyan)%d%Creset %s %C(white)- %ar%Creset' ..@{u})
+	outgoing = !(git fetch --quiet && git log --pretty=format:'%C(yellow)%h %C(white)- %C(red)%an %C(white)- %C(cyan)%d%Creset %s %C(white)- %ar%Creset' @{u}..)
+	unstage = reset HEAD --
+	undo = checkout --
+	rollback = reset --soft HEAD~1
