@@ -1,0 +1,46 @@
+#
+# @narcisista3g
+# Este arquivo contém os aliases para o shell
+#
+
+# Aliases para Listagem de Arquivos e Diretórios
+alias ls='ls --color=auto'
+alias la='ls -a'
+alias ll='ls -alFh'
+alias l='ls'
+alias l.="ls -A | egrep '^\.'"
+
+# Aliases para o gerenciador de pacotes Pacman
+alias udpate='sudo pacman --color auto -Syy'
+alias upgrade='sudo pacman --color auto -Syyuu --noconfirm'
+alias unlock="sudo rm /var/lib/pacman/db.lck"
+alias rmpacmanlock="sudo rm /var/lib/pacman/db.lck"
+alias update-mirrors='rate-mirrors --allow-root --disable-comments arch | sudo tee /etc/pacman.d/mirrorlist'
+
+# Aliases para o Grep
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# Aliases para visualizar memoria ram e swap
+alias memory="free -mt"
+
+# Aliases para Downloads com wget
+alias wget="wget -c"
+
+# Aliase para atualizar fontes
+alias update-fc='sudo fc-cache -fv'
+
+# Aliases para matar processo
+alias kp='killall polybar'
+alias kpi='killall picom'
+
+# Aliases para Docker
+alias dck='docker-compose'
+
+# Aliases para systemctl
+alias enable='sudo systemctl enable'
+alias disable='sudo systemctl disable'
+alias start='sudo systemctl start'
+alias stop='sudo systemctl stop'
+alias restart='sudo systemctl restart'
