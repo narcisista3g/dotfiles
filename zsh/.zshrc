@@ -83,6 +83,11 @@ if [ -f $ZSH/oh-my-zsh.sh ]; then
   source $ZSH/oh-my-zsh.sh
 fi
 
+# Carregar as configurações do shell
+if [ -f $HOME/.shellrc ]; then
+  source $HOME/.shellrc
+fi
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -102,14 +107,4 @@ fi
 
 if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-fi
-
-# Personal Script zsh
-#create a file called .zshrc-personal and put all your personal aliases
-#in there. They will not be overwritten by skel.
-[[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
-
-# Load Configs Shell
-if [ -f $HOME/.shellrc ]; then
-  source $HOME/.shellrc
 fi
