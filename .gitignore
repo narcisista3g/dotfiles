@@ -1,2 +1,15 @@
-# IGNORANDO A PASTA DE DEPENDENCIAS DO NODE
-node_modules/
+# ============================================================
+# @narcisista3g
+# Arqivo para ignorar pastas e arquivos dentro do projeto
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ============================================================
+
+# ============================================================
+# ARQUIVOS DO GIT
+# ============================================================
+.gitconfig
+!examples/.gitconfig
+
+# ============================================================
+# END OF FILE
+# ============================================================
