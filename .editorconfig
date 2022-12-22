@@ -1,0 +1,80 @@
+#
+# @narcisista3g
+# aquivo de configuração da extensão editor config, para padronizar a formatação de arquivos
+#
+# EditorConfig is awesome: https://EditorConfig.org
+#
+
+# arquivo editor config mais alto
+root = true
+
+# valores padrão
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+max_line_length = 140
+
+# markdown e texto
+[*.{md,MD,txt}, LICENSE]
+trim_trailing_whitespace = false
+
+# tsx e typescript
+[*.{ts,tsx}]
+block_comment_start = /**
+block_comment = *
+block_comment_end = */
+max_line_length = 150
+
+# jsx e javascript
+[*.{js,jsx}]
+block_comment_start = /**
+block_comment = *
+block_comment_end = */
+max_line_length = 150
+
+# configuração e docker
+[*.{yml,yaml}]
+insert_final_newline = false
+max_line_length = 60
+
+# json, prettier e eslint
+[*.{json,prettierrc,eslintrc}]
+insert_final_newline = false
+
+# css, less, styl, sass e scss
+[*.{css,styl,scss,less,sass}]
+indent_size = 4
+
+# shell script
+[*.sh]
+indent_style = tab
+indent_size = 4
+
+# husky script
+[pre-*]
+indent_style = tab
+indent_size = 4
+
+# makefile
+[Makefile]
+indent_style = tab
+indent_size = 4
+
+# scripts do windows
+[*.bat]
+end_of_line = crlf
+
+# python
+[*.py]
+indent_style = space
+indent_size = 4
+
+# html, html e jinja
+[*.{html,htm,jinja,jinja2}]
+indent_style = space
+indent_size = 2
+insert_final_newline = false
