@@ -40,3 +40,12 @@ install:
 	@ln -s ~/.dotfiles/.genentriesrc ~/.genentriesrc
 	@ln -s ~/.dotfiles/.wgetrc ~/.wgetrc
 	@echo "Dotfiles installed"
+
+restaure:
+	@rm -rf ~/.{bashrc,zshrc,bash_profile,bash_logout,Xresources,screenrc,face,dmrc,conkyrc,xinitrc,genentriesrc,shellrc,shell_aliases,yarnrc,wgetrc}
+	@rm -rf ~/.config/alacritty/{alacritty,default-arcolinux,default-github}.yml
+	@rm -rf ~/.config/fontconfig/fonts.conf
+	@cp ~/Backups/dotfiles/.{bashrc,zshrc,bash_profile,bash_logout,Xresources,screenrc,face,dmrc,conkyrc,xinitrc,genentriesrc} ~/
+	@cp ~/Backups/dotfiles/alacritty/{alacritty,default-arcolinux,default-github}.yml ~/.config/alacritty/
+	@cp ~/Backups/dotfiles/fontconfig/fonts.conf ~/.config/fontconfig/
+	@echo "Dotfiles restored"
