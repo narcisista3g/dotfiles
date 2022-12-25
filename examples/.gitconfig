@@ -1,7 +1,7 @@
 [user]
 	email =
-	name = 
-	username = narcisista3g
+	name =
+	username = yourusername
 	signingKey =
 
 [init]
@@ -73,9 +73,9 @@
  	default = simple
 
 [url "git@github.com:github"]
-	insteadOf = "https://github.com/narcisista3g"
+	insteadOf = "https://github.com/yourusername"
 	insteadOf = "github:github"
-	insteadOf = "git://github.com/narcisista3g"
+	insteadOf = "git://github.com/yourusername"
 
 [url "git@github.com:"]
 	pushInsteadOf = "https://github.com/"
