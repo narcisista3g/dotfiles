@@ -14,7 +14,7 @@ backup:
 remove:
 	@rm ~/.{bash,zsh}rc
 	@rm ~/.bash_{profile,logout}
-	@rm ~/.{Xresources,screenrc,face,dmrc,conkyrcm,genentriesrc,xinitrc}
+	@rm -rf ~/.{Xresources,screenrc,face,dmrc,conkyrc,genentriesrc,xinitrc}
 	@rm ~/.config/alacritty/{alacritty,default-arcolinux,default-github}.yml
 	@rm ~/.config/fontconfig/fonts.conf
 	@echo "Dotfiles removed"
@@ -27,7 +27,7 @@ install:
 	@ln -s ~/.dotfiles/alacritty/default-arcolinux.yml ~/.config/alacritty/default-arcolinux.yml
 	@ln -s ~/.dotfiles/alacritty/default-github.yml ~/.config/alacritty/default-github.yml
 	@ln -s ~/.dotfiles/zsh/.zshrc ~/.zshrc
-	@ln -s ~/.dotfiles/zsh/.shellrc ~/.shellrc
+	@ln -s ~/.dotfiles/.shellrc ~/.shellrc
 	@ln -s ~/.dotfiles/.shell_aliases ~/.shell_aliases
 	@ln -s ~/.dotfiles/.conkyrc ~/.conkyrc
 	@ln -s ~/.dotfiles/.xinitrc ~/.xinitrc
